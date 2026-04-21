@@ -21,13 +21,13 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KEI//WORKS — Solar Electric Kei Trucks",
+  title: "NORMAL ROBOTICS — Solar Electric Kei Trucks",
   description:
-    "Boutique restoration and electrification of vintage Kei trucks. Mobile power. Zero exhaust. Infinite capability.",
+    "Boutique restoration and electrification of vintage Kei trucks. Handcrafted in Hawaii. Mobile power. Zero exhaust. Infinite capability.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f1f0e8",
+  themeColor: "#f8f8f8",
 };
 
 export default function RootLayout({

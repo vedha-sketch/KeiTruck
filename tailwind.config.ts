@@ -5,6 +5,11 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
   ],
+  safelist: [
+    { pattern: /^bg-(paper|bone|ivory|stone|ink|graphite|brass|bronze|white)/ },
+    { pattern: /^text-(paper|bone|ink|graphite|ash|slate|brass|bronze|platinum|white)/ },
+    { pattern: /^border-(paper|bone|ink|graphite|brass|white)/ },
+  ],
   theme: {
     extend: {
       colors: {
@@ -29,6 +34,7 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       letterSpacing: {
+        luxury: "0.15em",
         engineered: "0.08em",
         widest: "0.18em",
         ultra: "0.4em",

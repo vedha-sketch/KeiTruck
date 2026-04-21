@@ -43,25 +43,26 @@ export default function Specs() {
   return (
     <section
       id="specs"
-      className="relative overflow-hidden border-t border-ink/8 bg-bone py-44 md:py-64"
+      className="relative overflow-hidden border-t border-[0.5px] border-ink/10 bg-bone py-52 md:py-72"
+      style={{ backgroundColor: "#F7F6F2", color: "#1A1A1A" }}
     >
       <div className="relative mx-auto max-w-[1440px] px-6 md:px-14">
         <Reveal>
           <div className="flex items-center gap-4">
             <span className="h-px w-10 bg-brass" />
             <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brass">
-              04 — Technical Dossier
+              05 — Technical Dossier
             </span>
           </div>
-          <h2 className="mt-10 max-w-3xl font-display text-4xl font-semibold uppercase leading-[1.06] tracking-engineered text-ink md:text-6xl">
+          <h2 className="mt-10 max-w-3xl font-display text-4xl font-light uppercase leading-[1.12] tracking-luxury text-ink md:text-6xl">
             Specifications.
           </h2>
         </Reveal>
 
-        <div className="mt-24 grid gap-px overflow-hidden border border-stone/60 bg-stone/60 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-32 grid gap-16 md:grid-cols-2 lg:grid-cols-4">
           {groups.map((g, i) => (
             <Reveal key={g.head} delay={i * 0.07}>
-              <div className="h-full bg-bone p-10 md:p-12">
+              <div className="h-full">
                 <h3 className="font-mono text-[10px] uppercase tracking-[0.32em] text-brass">
                   {g.head}
                 </h3>
@@ -69,12 +70,12 @@ export default function Specs() {
                   {g.rows.map(([k, v]) => (
                     <div
                       key={k}
-                      className="flex items-baseline justify-between gap-4 border-b border-stone/50 pb-4 last:border-0"
+                      className="flex items-baseline justify-between gap-4 border-b border-[0.5px] border-ink/8 pb-4 last:border-0"
                     >
                       <dt className="font-mono text-[10px] uppercase tracking-[0.24em] text-ash">
                         {k}
                       </dt>
-                      <dd className="text-right font-display text-sm font-medium uppercase tracking-engineered text-ink">
+                      <dd className="text-right font-display text-sm font-light uppercase tracking-luxury text-ink">
                         {v}
                       </dd>
                     </div>

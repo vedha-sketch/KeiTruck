@@ -1,16 +1,9 @@
-import Logo from "./Logo";
-
 export default function Footer() {
   return (
     <footer className="relative border-t border-ink/10 bg-paper pb-12 pt-28">
       <div className="mx-auto max-w-[1440px] px-6 md:px-14">
         <div className="grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <Logo />
-            <p className="mt-10 max-w-sm text-base leading-[1.8] text-graphite">
-              Boutique restoration and electrification of vintage Kei trucks.
-              Built one chassis at a time, in Vermont.
-            </p>
           </div>
 
           <div className="grid grid-cols-3 gap-8 lg:col-span-7">
@@ -25,7 +18,7 @@ export default function Footer() {
               },
               {
                 head: "Contact",
-                items: ["build@kei.works", "+1 (802) 555-0144", "Instagram"],
+                items: ["keitruck@normallab.co", "+1 (802) 555-0144", "Instagram"],
               },
             ].map((c) => (
               <div key={c.head}>
@@ -47,9 +40,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-28 flex flex-col items-start justify-between gap-4 border-t border-stone/60 pt-8 md:flex-row md:items-center">
+        <div className="mt-28 flex flex-col items-start justify-between gap-4 pt-8 md:flex-row md:items-center">
           <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-ash">
-            © 2026 Kei//Works Atelier · All Rights Reserved
+            © 2026 Normal Robotics · All Rights Reserved
           </p>
           <p className="font-mono text-[9px] uppercase tracking-[0.3em] text-ash">
             Hand-built · Solar Powered · Made for Work

@@ -3,43 +3,62 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: only light;
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: #F1F0E8;
 }
 
 html,
 body {
-  background-color: #f1f0e8;
+  background-color: #F1F0E8;
   color: #1a1a1a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-::selection {
-  background: #c5a059;
-  color: #f1f0e8;
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #F1F0E8;
+    color: #1a1a1a;
+  }
 }
 
-/* Hairline divider — soft warm etch */
+::selection {
+  background: rgba(197, 160, 89, 0.2);
+  color: #1a1a1a;
+}
+
+/* Hairline divider — 0.5px precision */
 .hairline {
   background: linear-gradient(
     to right,
     transparent,
-    rgba(26, 26, 26, 0.14),
+    rgba(26, 26, 26, 0.12),
     transparent
   );
+  height: 0.5px;
 }
 
 .hairline-v {
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(26, 26, 26, 0.14),
+    rgba(26, 26, 26, 0.12),
     transparent
   );
+  width: 0.5px;
+}
+
+@keyframes fade-in-video {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -50,5 +69,20 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Hover effects for phase cards */
+@layer utilities {
+  .group:hover {
+    background-color: #F1F0E8;
+  }
+
+  .group:hover .group-hover\:text-brass\/40 {
+    color: rgba(197, 160, 89, 0.4);
+  }
+
+  .group:hover .group-hover\:scale-x-100 {
+    transform: scaleX(1);
   }
 }
