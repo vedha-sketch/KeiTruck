@@ -1,9 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Reveal from "./Reveal";
-import TruckModelViewer from "./TruckModelViewer";
+
+const TruckModelViewer = dynamic(() => import("./TruckModelViewer"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-[500px] md:h-[600px] rounded-lg bg-paper border border-[0.5px] border-ink/10 flex items-center justify-center">
+      <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-ash">Loading model...</span>
+    </div>
+  ),
+});
 
 const luxuryFeatures = [
   {
