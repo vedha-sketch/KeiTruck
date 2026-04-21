@@ -9,8 +9,10 @@ interface TruckModel3DProps {
   color: string;
 }
 
+const MODEL_PATH = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/simple_kei_truck.glb`;
+
 function TruckModel({ color }: TruckModel3DProps) {
-  const gltf = useGLTF("/simple_kei_truck.glb");
+  const gltf = useGLTF(MODEL_PATH);
 
   // Enable shadows on all meshes
   useEffect(() => {
@@ -93,4 +95,4 @@ export default function TruckModelViewer({ color }: TruckModel3DProps) {
   );
 }
 
-useGLTF.preload("/simple_kei_truck.glb");
+useGLTF.preload(MODEL_PATH);

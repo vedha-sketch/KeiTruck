@@ -34,7 +34,7 @@ export default function Hero() {
           }}
           className="h-full w-full object-cover"
         >
-          <source src="/Kei Truck Start Page.mp4" type="video/mp4" />
+          <source src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Kei Truck Start Page.mp4`} type="video/mp4" />
         </video>
         {/* Dark overlay scoped to video only */}
         <div className="absolute inset-0 bg-black/10" />

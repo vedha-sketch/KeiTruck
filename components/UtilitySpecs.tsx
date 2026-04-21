@@ -4,6 +4,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Reveal from "./Reveal";
+import ErrorBoundary from "./ErrorBoundary";
 
 const TruckModelViewer = dynamic(() => import("./TruckModelViewer"), {
   ssr: false,
@@ -190,7 +191,9 @@ function ColorCustomizer({ selectedColor, setSelectedColor }: { selectedColor: s
         <div className="mt-32 grid lg:grid-cols-12 gap-16">
           {/* 3D Canvas */}
           <Reveal delay={0.2} className="lg:col-span-8">
-            <TruckModelViewer color={selectedColor} />
+            <ErrorBoundary>
+              <TruckModelViewer color={selectedColor} />
+            </ErrorBoundary>
           </Reveal>
 
           {/* Color Picker Controls */}
