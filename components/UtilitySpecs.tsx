@@ -165,7 +165,7 @@ function ColorCustomizer({ selectedColor, setSelectedColor }: { selectedColor: s
           <div className="flex items-center gap-4">
             <span className="h-px w-10 bg-brass" />
             <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brass">
-              04 — Customize Your Build
+              03 — Customize Your Build
             </span>
           </div>
           <h2 className="mt-10 max-w-4xl font-display text-4xl font-light uppercase leading-[1.12] tracking-luxury text-ink md:text-6xl">
@@ -262,7 +262,7 @@ export default function UtilitySpecs() {
           <div className="flex items-center gap-4">
             <span className="h-px w-10 bg-brass" />
             <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brass">
-              03 — Grid-Free
+              02 — Grid-Free
             </span>
           </div>
           <h2 className="mt-10 max-w-4xl font-display text-4xl font-light uppercase leading-[1.12] tracking-luxury text-ink md:text-6xl">

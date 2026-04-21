@@ -46,7 +46,7 @@ export default function BuildProcess() {
               <div className="flex items-center gap-4">
                 <span className="h-px w-10 bg-brass" />
                 <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-brass">
-                  02 — The Process
+                  03 — The Process
                 </span>
               </div>
               <h2 className="mt-10 max-w-3xl font-display text-4xl font-light uppercase leading-[1.12] tracking-luxury text-ink md:text-6xl">

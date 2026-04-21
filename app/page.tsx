@@ -13,8 +13,8 @@ export default function Page() {
       <Nav />
       <Hero />
       <Vision />
-      <BuildProcess />
       <UtilitySpecs />
+      <BuildProcess />
       <Specs />
       <Quote />
       <Footer />
